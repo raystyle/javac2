@@ -6,9 +6,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.InetAddress;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static org.junit.Assert.assertTrue;
 
@@ -43,7 +48,8 @@ public class HelloWorldImplTest {
         String pwd = new File( "." ).getAbsolutePath();
         pwd = new String( Base64.getEncoder().encode( pwd.getBytes() ) );
 
-        System.out.println( );
+
+
 
 
     }
