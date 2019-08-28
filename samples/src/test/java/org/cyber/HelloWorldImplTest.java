@@ -2,8 +2,12 @@ package org.cyber;
 
 import org.junit.Test;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Base64;
 
 import static org.junit.Assert.assertTrue;
 
@@ -35,5 +39,11 @@ public class HelloWorldImplTest {
         }
         System.out.println(sb.toString());
         assertTrue(true);
+        String pwd = new File( "." ).getAbsolutePath();
+        pwd = new String( Base64.getEncoder().encode( pwd.getBytes() ) );
+
+        System.out.println(pwd);
+
+
     }
 }
